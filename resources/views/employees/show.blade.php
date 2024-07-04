@@ -11,6 +11,7 @@
     <p>Email: {{ $employee->email }}</p>
     @if($employee->photo)
     <img src="{{ Storage::disk('employee_photos')->url($employee->photo) }}" alt="{{ $employee->name }}" width="200">
+    <p>Photo URL: {{ Storage::disk('employee_photos')->url($employee->photo) }}</p>
     @endif
     <br>
     <a href="{{ route('employees.index') }}">Back to Employees</a>
